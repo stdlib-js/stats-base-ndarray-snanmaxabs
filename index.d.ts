@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,28 +16,35 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { float32ndarray } from '@stdlib/types/ndarray';
 
 /**
-* Compute the maximum absolute value of a one-dimensional single-precision floating-point ndarray, ignoring `NaN` values.
+* Computes the maximum absolute value of a one-dimensional single-precision floating-point ndarray, ignoring `NaN` values.
 *
-* @module @stdlib/stats-base-ndarray-snanmaxabs
+* ## Notes
+*
+* -   The function expects the following ndarrays:
+*
+*     -   a one-dimensional input ndarray.
+*
+* @param arrays - array-like object containing ndarrays
+* @returns maximum absolute value
 *
 * @example
 * var Float32Vector = require( '@stdlib/ndarray-vector-float32' );
-* var snanmaxabs = require( '@stdlib/stats-base-ndarray-snanmaxabs' );
 *
 * var x = new Float32Vector( [ 1.0, -2.0, NaN, 2.0 ] );
 *
 * var v = snanmaxabs( [ x ] );
 * // returns 2.0
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function snanmaxabs( arrays: [ float32ndarray ] ): number;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = snanmaxabs;
